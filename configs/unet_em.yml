@@ -1,0 +1,64 @@
+id: 1
+model:
+    arch: unet
+
+data:
+    # dataset: thigh
+    dataset: em
+    compound: False
+    train_split: train
+    val_split: val
+    test_split: test
+    # img_rows: 'same'
+    # img_cols: 'same'
+    img_rows: 512
+    img_cols: 512
+    # path: /Users/ultrashieldrog/Datasets/EM_Challenge/ 
+    path: /raid/roger/EM_Challenge
+#    path: '/media/jacktang/Work/USYD/Research/2020_ISMRM/dataset/whole'
+    # path: '~/Documents/Research/2020/ISMRM/dataset'
+
+training:
+    train_iters: 100 #200
+    batch_size: 8
+    # patch_size: 256
+    # cross_entropy_ratio: 0.003
+    val_interval: 10 #10
+    n_classes: 2
+    n_workers: 4
+    print_interval: 1
+    print_interval_per_batch: False
+    # augmentations:
+    #   hflip: 0.5 # [0, 1)
+    #   vflip: 0.5 # [0, 1)
+    #   rotate: 180 # [-180, 180]
+    optimizer:
+        name: 'adam'
+        lr: 1.0e-3
+        weight_decay: 0.0005
+#        momentum: 0.9
+    loss:
+        # name: 'binary_cross_entropy'
+        # name: 'cross_entropy2d'
+        # name: 'regression_l1'
+        name: 'dice'
+        size_average: True
+    lr_schedule:
+    resume:
+
+# test:
+#     batch_size: 1
+#     n_workers: 4
+#     cp_path : '/raid/roger/runs/unet/65571/unet_em_model_best.pkl'
+#     save: True
+#     nifti:
+#         nifti_in: '/raid/roger/test/nii_test'
+#         nifti_out: '/raid/roger/test/nii_test_out'
+test:
+    batch_size: 8
+    n_workers: 4
+    # cp_path : '/Users/ultrashieldrog/Downloads/unet_em_model_best.pkl'
+    cp_path: '../runs/unet/94072/unet_em_model_best.pkl'
+    csv_path: '/home/roger/'
+    save: True
+    nifti:

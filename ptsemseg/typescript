@@ -1,0 +1,357 @@
+Script started on Mon 04 Nov 2019 15:12:06 AEDT
+-------- freesurfer-Linux-centos6_x86_64-stable-pub-v6.0.0-2beb96c --------
+Setting up environment for FreeSurfer/FS-FAST (and FSL)
+FREESURFER_HOME   /usr/local/freesurfer
+FSFAST_HOME       /usr/local/freesurfer/fsfast
+FSF_OUTPUT_FORMAT nii.gz
+SUBJECTS_DIR      /usr/local/freesurfer/subjects
+MNI_DIR           /usr/local/freesurfer/mni
+FSL_DIR           /usr/local/fsl
+l(base) ]0;jacktang@JackTang: /media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentation/ptsemsegjacktang@JackTang:/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentatiion/ptsemseg$ ls
+[0m[34;42maugmentations[0m  [34;42mloader[0m  [01;32mmetrics.py[0m  [34;42moptimizers[0m   [34;42mschedulers[0m  [01;32mutils.py[0m
+[01;32m__init__.py[0m    [34;42mloss[0m    [34;42mmodels[0m      [34;42m__pycache__[0m  [01;32mtypescript[0m
+(base) ]0;jacktang@JackTang: /media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentation/ptsemsegjacktang@JackTang:/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentatiion/ptsemseg$ ./[K[Kcd [K[K[Kcd scr[K[K[K[K[K[Kls
+[0m[34;42maugmentations[0m  [34;42mloader[0m  [01;32mmetrics.py[0m  [34;42moptimizers[0m   [34;42mschedulers[0m  [01;32mutils.py[0m
+[01;32m__init__.py[0m    [34;42mloss[0m    [34;42mmodels[0m      [34;42m__pycache__[0m  [01;32mtypescript[0m
+(base) ]0;jacktang@JackTang: /media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentation/ptsemsegjacktang@JackTang:/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentatiion/ptsemseg$ cd ..
+(base) ]0;jacktang@JackTang: /media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentationjacktang@JackTang:/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentatiion$ ks
+ks: command not found
+(base) ]0;jacktang@JackTang: /media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentationjacktang@JackTang:/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentatiion$ ls
+[0m[01;32mcomparison.py[0m  [34;42mdebug[0m                                [34;42mptsemseg[0m   [34;42mruns[0m     [01;32mtest.py[0m
+[34;42mconfigs[0m        [34;42mmorphological_segmentation_pipeline[0m  [01;32mREADME.md[0m  [34;42mscripts[0m  [01;32mtrain.py[0m
+(base) ]0;jacktang@JackTang: /media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentationjacktang@JackTang:/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentatiion$ cd scripts/
+(base) ]0;jacktang@JackTang: /media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentation/scriptsjacktang@JackTang:/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentatiion/scripts$ ls
+[0m[01;32mthigh.sh[0m
+(base) ]0;jacktang@JackTang: /media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentation/scriptsjacktang@JackTang:/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentatiion/scripts$ ./thigh.sh 
+../test.py:110: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(fp)
+n_classes is: 2
+model:  resunet
+({'Overall Acc: \t': 0.9754189846405923, 'Mean Acc : \t': 0.9654846687513166, 'Pix Acc: \t': 0.9754189846405923, 'IoU : \t': 0.8921121653505798, 'Dice : \t': 0.9429802119424404, 'Precision: \t': 0.9379217472743765, 'Recall: \t': 0.948093535806434}, {1: 0.948093535806434, 0: 0.982875801696199})
+(base) ]0;jacktang@JackTang: /media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentation/scriptsjacktang@JackTang:/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentatiion/scripts$ ./thigh.sh 
+../test.py:110: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(fp)
+n_classes is: 2
+model:  resunet
+({'Overall Acc: \t': 0.9747945234865324, 'Mean Acc : \t': 0.9635688935683893, 'Pix Acc: \t': 0.9747945234865324, 'IoU : \t': 0.889239670891481, 'Dice : \t': 0.9413730662048536, 'Precision: \t': 0.9388426388601739, 'Recall: \t': 0.9439171707449558}, {1: 0.9439171707449558, 0: 0.9832206163918226})
+(base) ]0;jacktang@JackTang: /media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentation/scriptsjacktang@JackTang:/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentatiion/scripts$ ./thigh.sh 
+../train.py:320: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(fp)
+RUNDIR: ../runs/resunet/60088
+test found!
+length of val_paths is: 0
+length of img_paths is: 0
+Cross Entropy's Weight:tensor([  1.0030, 333.3333], device='cuda:0')
+Using loss : dice
+Using hflip aug with params 0.5
+Using vflip aug with params 0.5
+Using rotate aug with params 180
+937
+937
+n_classes is: 2
+trainloader len:  235
+Training from 0th iteration
+
+Iter [1/200]  Loss: 0.0985  Time/Image: 0.0269
+EntireTime for 1th training iteration: 0 h 0 m 31.526742458343506 s  EntireTime/Image: 0 h 0 m 0.033539087721642026 s
+Validation: average loss for current iteration is: 0.07977723441225418
+save_path is: ../runs/resunet/60088/resunet_thigh_model_best.pkl
+^CTraceback (most recent call last):
+  File "../train.py", line 332, in <module>
+    train(cfg, writer, logger)
+  File "../train.py", line 241, in train
+    loss.backward()
+  File "/home/jacktang/anaconda3/lib/python3.6/site-packages/torch/tensor.py", line 107, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph)
+  File "/home/jacktang/anaconda3/lib/python3.6/site-packages/torch/autograd/__init__.py", line 93, in backward
+    allow_unreachable=True)  # allow_unreachable flag
+KeyboardInterrupt
+(base) ]0;jacktang@JackTang: /media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentation/scriptsjacktang@JackTang:/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentatiion/scripts$ ./thigh.sh 
+../test.py:110: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(fp)
+n_classes is: 2
+model:  resunet
+({'Overall Acc: \t': 0.9755405441986467, 'Mean Acc : \t': 0.9669794698533491, 'Pix Acc: \t': 0.9755405441986467, 'IoU : \t': 0.8929812103754126, 'Dice : \t': 0.9434654770802697, 'Precision: \t': 0.9350899962879986, 'Recall: \t': 0.9519923500808828}, {1: 0.9519923500808828, 0: 0.9819665896258155})
+(base) ]0;jacktang@JackTang: /media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentation/scriptsjacktang@JackTang:/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentatiion/scripts$ ./thigh.sh 
+../train.py:320: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(fp)
+RUNDIR: ../runs/resunet/20685
+test found!
+length of val_paths is: 0
+length of img_paths is: 0
+Cross Entropy's Weight:tensor([  1.0030, 333.3333], device='cuda:0')
+Using loss : dice
+Using hflip aug with params 0.5
+Using vflip aug with params 0.5
+Using rotate aug with params 180
+937
+937
+n_classes is: 2
+trainloader len:  235
+Training from 0th iteration
+
+Iter [1/200]  Loss: 0.1260  Time/Image: 0.0262
+EntireTime for 1th training iteration: 0 h 0 m 29.55955958366394 s  EntireTime/Image: 0 h 0 m 0.03144633998262121 s
+Validation: average loss for current iteration is: 0.08160107256250179
+save_path is: ../runs/resunet/20685/resunet_thigh_model_best.pkl
+^CTraceback (most recent call last):
+  File "../train.py", line 332, in <module>
+    train(cfg, writer, logger)
+  File "../train.py", line 242, in train
+    optimizer.step()
+  File "/home/jacktang/anaconda3/lib/python3.6/site-packages/torch/optim/adam.py", line 94, in step
+    exp_avg_sq.mul_(beta2).addcmul_(1 - beta2, grad, grad)
+KeyboardInterrupt
+(base) ]0;jacktang@JackTang: /media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentation/scriptsjacktang@JackTang:/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentatiion/scripts$ ./thigh.sh 
+../test.py:110: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(fp)
+n_classes is: 2
+model:  resunet
+({'Overall Acc: \t': 0.9730335060023863, 'Mean Acc : \t': 0.9643855465038969, 'Pix Acc: \t': 0.9730335060023863, 'IoU : \t': 0.8829941037066175, 'Dice : \t': 0.9378617829641315, 'Precision: \t': 0.9267470802888936, 'Recall: \t': 0.9492463245366808}, {1: 0.9492463245366808, 0: 0.9795247684711129})
+(base) ]0;jacktang@JackTang: /media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentation/scriptsjacktang@JackTang:/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentatiion/scripts$ ./thigh.sh 
+../test.py:110: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(fp)
+n_classes is: 2
+model:  resunet
+({'Overall Acc: \t': 0.9631827126985814, 'Mean Acc : \t': 0.9298162959367049, 'Pix Acc: \t': 0.9631827126985814, 'IoU : \t': 0.835368038321332, 'Dice : \t': 0.9103003004077351, 'Precision: \t': 0.9528304436524437, 'Recall: \t': 0.8714046452233867}, {1: 0.8714046452233867, 0: 0.9882279466500232})
+(base) ]0;jacktang@JackTang: /media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentation/scriptsjacktang@JackTang:/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentatiion/scripts$ ./thigh.sh 
+../test.py:110: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(fp)
+n_classes is: 2
+model:  resunet
+({'Overall Acc: \t': 0.9592326016605649, 'Mean Acc : \t': 0.9159884471732955, 'Pix Acc: \t': 0.9592326016605649, 'IoU : \t': 0.8154589380357572, 'Dice : \t': 0.8983501867776157, 'Precision: \t': 0.9650362637310019, 'Recall: \t': 0.8402847099296474}, {1: 0.8402847099296474, 0: 0.9916921844169437})
+(base) ]0;jacktang@JackTang: /media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentation/scriptsjacktang@JackTang:/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentatiion/scripts$ ./thigh.sh 
+../test.py:110: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(fp)
+n_classes is: 2
+model:  unet
+({'Overall Acc: \t': 0.8619334328623496, 'Mean Acc : \t': 0.682734828580708, 'Pix Acc: \t': 0.8619334328623496, 'IoU : \t': 0.36427812359905637, 'Dice : \t': 0.5340232571318617, 'Precision: \t': 0.965874874800753, 'Recall: \t': 0.36902759545722025}, {1: 0.36902759545722025, 0: 0.9964420617041957})
+(base) ]0;jacktang@JackTang: /media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentation/scriptsjacktang@JackTang:/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentatiion/scripts$ ./thigh.sh 
+../test.py:110: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(fp)
+n_classes is: 2
+model:  unet
+({'Overall Acc: \t': 0.96857372587196, 'Mean Acc : \t': 0.9409842647278874, 'Pix Acc: \t': 0.96857372587196, 'IoU : \t': 0.8589518319272444, 'Dice : \t': 0.9241248935823552, 'Precision: \t': 0.9578592776341786, 'Recall: \t': 0.8926858220387237}, {1: 0.8926858220387237, 0: 0.989282707417051})
+(base) ]0;jacktang@JackTang: /media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentation/scriptsjacktang@JackTang:/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentatiion/scripts$ ./thigh.sh 
+../test.py:241: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(fp)
+n_classes is: 2
+Traceback (most recent call last):
+  File "../test.py", line 242, in <module>
+    test(cfg)
+  File "../test.py", line 34, in test
+    state = convert_state_dict(torch.load(cfg['test']['cp_path'])["model_state"])
+  File "/home/jacktang/anaconda3/lib/python3.6/site-packages/torch/serialization.py", line 382, in load
+    f = open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: '/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentation/runs/res_atten_unet/temp/resAttUnet_thigh_model_best.pkl'
+(base) ]0;jacktang@JackTang: /media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentation/scriptsjacktang@JackTang:/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentatiion/scripts$ ./thigh.sh 
+../test.py:241: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(fp)
+n_classes is: 2
+model:  resAttUnet
+Traceback (most recent call last):
+  File "../test.py", line 242, in <module>
+    test(cfg)
+  File "../test.py", line 47, in test
+    test_path = cfg['test']['nifti_in']
+KeyError: 'nifti_in'
+(base) ]0;jacktang@JackTang: /media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentation/scriptsjacktang@JackTang:/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentatiion/scripts$ ./thigh.sh 
+../test.py:241: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(fp)
+n_classes is: 2
+model:  resAttUnet
+({'Overall Acc: \t': 0.8675738218937957, 'Mean Acc : \t': 0.9153664287560529, 'IoU : \t': 0.6179328007639115, 'Dice : \t': 0.763854716922919, 'Precision: \t': 0.6183027185852099, 'Recall: \t': 0.9990327414632287}, {1: 0.9990327414632287, 0: 0.8317001160488771})
+(base) ]0;jacktang@JackTang: /media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentation/scriptsjacktang@JackTang:/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentatiion/scripts$ ./thigh.sh 
+../train.py:320: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(fp)
+RUNDIR: ../runs/res_atten_unet/67885
+test found!
+length of val_paths is: 0
+length of img_paths is: 0
+Cross Entropy's Weight:tensor([  1.0030, 333.3333], device='cuda:0')
+Using loss : cross_entropy2d
+Using hflip aug with params 0.5
+Using vflip aug with params 0.5
+Using rotate aug with params 180
+937
+937
+n_classes is: 2
+trainloader len:  235
+Training from 0th iteration
+
+/home/jacktang/anaconda3/lib/python3.6/site-packages/torch/nn/_reduction.py:46: UserWarning: size_average and reduce args will be deprecated, please use reduction='mean' instead.
+  warnings.warn(warning.format(ret))
+^CTraceback (most recent call last):
+  File "../train.py", line 332, in <module>
+    train(cfg, writer, logger)
+  File "../train.py", line 242, in train
+    optimizer.step()
+  File "/home/jacktang/anaconda3/lib/python3.6/site-packages/torch/optim/adam.py", line 101, in step
+    denom = exp_avg_sq.sqrt().add_(group['eps'])
+KeyboardInterrupt
+(base) ]0;jacktang@JackTang: /media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentation/scriptsjacktang@JackTang:/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentatiion/scripts$ ./thigh.sh 
+../test.py:242: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(fp)
+n_classes is: 2
+model:  resAttUnet
+Traceback (most recent call last):
+  File "../test.py", line 243, in <module>
+    test(cfg)
+  File "../test.py", line 47, in test
+    test_path = cfg['test']['nifti_in']
+KeyError: 'nifti_in'
+(base) ]0;jacktang@JackTang: /media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentation/scriptsjacktang@JackTang:/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentatiion/scripts$ ./thigh.sh 
+../test.py:242: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(fp)
+n_classes is: 2
+model:  resAttUnet
+Traceback (most recent call last):
+  File "../test.py", line 243, in <module>
+    test(cfg)
+  File "../test.py", line 61, in test
+    padded_slice, pad_info = pad_slice(roi_slice)
+  File "../test.py", line 171, in pad_slice
+    pad_left, pad_right = pad_bg_x(img_slice, i)
+NameError: name 'i' is not defined
+(base) ]0;jacktang@JackTang: /media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentation/scriptsjacktang@JackTang:/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentatiion/scripts$ ./thigh.sh 
+../test.py:240: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(fp)
+n_classes is: 2
+model:  resAttUnet
+Traceback (most recent call last):
+  File "../test.py", line 241, in <module>
+    test(cfg)
+  File "../test.py", line 64, in test
+    padded_slice = padded_slice.transpose(2, 0, 1)
+ValueError: axes don't match array
+(base) ]0;jacktang@JackTang: /media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentation/scriptsjacktang@JackTang:/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentatiion/scripts$ ./thigh.sh 
+../test.py:242: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(fp)
+n_classes is: 2
+model:  resAttUnet
+Traceback (most recent call last):
+  File "../test.py", line 243, in <module>
+    test(cfg)
+  File "../test.py", line 71, in test
+    pred_slice = model(padded_slice)
+  File "/home/jacktang/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentation/ptsemseg/models/res_attn_unet.py", line 101, in forward
+    x = self.firstconv(x)
+  File "/home/jacktang/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/jacktang/anaconda3/lib/python3.6/site-packages/torch/nn/modules/conv.py", line 338, in forward
+    self.padding, self.dilation, self.groups)
+RuntimeError: Given groups=1, weight of size 64 3 7 7, expected input[1, 2, 256, 256] to have 3 channels, but got 2 channels instead
+(base) ]0;jacktang@JackTang: /media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentation/scriptsjacktang@JackTang:/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentatiion/scripts$ ./thigh.sh 
+../test.py:244: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(fp)
+n_classes is: 2
+model:  resAttUnet
+Traceback (most recent call last):
+  File "../test.py", line 245, in <module>
+    test(cfg)
+  File "../test.py", line 75, in test
+    result_slice = unpad_slice(pred_slice, pad_info)
+  File "../test.py", line 206, in unpad_slice
+    unpadded_slice = pred_slice.copy()
+AttributeError: 'Tensor' object has no attribute 'copy'
+(base) ]0;jacktang@JackTang: /media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentation/scriptsjacktang@JackTang:/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentatiion/scripts$ ./thigh.sh 
+../test.py:245: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(fp)
+n_classes is: 2
+model:  resAttUnet
+Traceback (most recent call last):
+  File "../test.py", line 246, in <module>
+    test(cfg)
+  File "../test.py", line 80, in test
+    nib.save(os.path.join(out_path, t), pred_nii)
+  File "/home/jacktang/anaconda3/lib/python3.6/site-packages/nibabel/loadsave.py", line 99, in save
+    img.to_filename(filename)
+AttributeError: 'str' object has no attribute 'to_filename'
+(base) ]0;jacktang@JackTang: /media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentation/scriptsjacktang@JackTang:/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentatiion/scripts$ ./thigh.sh 
+../test.py:245: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(fp)
+n_classes is: 2
+model:  resAttUnet
+Traceback (most recent call last):
+  File "../test.py", line 246, in <module>
+    test(cfg)
+  File "../test.py", line 80, in test
+    nib.save(out_path + '/' + t, pred_nii)
+  File "/home/jacktang/anaconda3/lib/python3.6/site-packages/nibabel/loadsave.py", line 99, in save
+    img.to_filename(filename)
+AttributeError: 'str' object has no attribute 'to_filename'
+(base) ]0;jacktang@JackTang: /media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentation/scriptsjacktang@JackTang:/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentatiion/scripts$ ./thigh.sh 
+../test.py:245: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(fp)
+n_classes is: 2
+model:  resAttUnet
+Traceback (most recent call last):
+  File "../test.py", line 246, in <module>
+    test(cfg)
+  File "../test.py", line 110, in test
+    score = running_metrics_val.get_scores()
+UnboundLocalError: local variable 'running_metrics_val' referenced before assignment
+(base) ]0;jacktang@JackTang: /media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentation/scriptsjacktang@JackTang:/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentatiion/scripts$ ./thigh.sh 
+../test.py:246: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(fp)
+n_classes is: 2
+model:  resAttUnet
+/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentation/ptsemseg/metrics.py:76: RuntimeWarning: invalid value encountered in double_scalars
+  acc = np.diag(hist).sum() / hist.sum()
+/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentation/ptsemseg/metrics.py:77: RuntimeWarning: invalid value encountered in true_divide
+  acc_cls = np.diag(hist) / hist.sum(axis=1)
+/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentation/ptsemseg/metrics.py:78: RuntimeWarning: Mean of empty slice
+  acc_cls = np.nanmean(acc_cls)
+/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentation/ptsemseg/metrics.py:87: RuntimeWarning: invalid value encountered in true_divide
+  freq = hist.sum(axis=1) / hist.sum()
+/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentation/ptsemseg/metrics.py:88: RuntimeWarning: invalid value encountered in double_scalars
+  iu = tp / (tp + fp + fn)
+/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentation/ptsemseg/metrics.py:89: RuntimeWarning: invalid value encountered in double_scalars
+  dice = 2 * tp / (tp + fp + tp + fn)
+/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentation/ptsemseg/metrics.py:91: RuntimeWarning: invalid value encountered in double_scalars
+  cls_iu = {1: tp/(tp+fn), 0: tn/(tn+fp)}
+/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentation/ptsemseg/metrics.py:103: RuntimeWarning: invalid value encountered in double_scalars
+  "Precision: \t": tp/(tp+fp),
+/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentation/ptsemseg/metrics.py:104: RuntimeWarning: invalid value encountered in double_scalars
+  "Recall: \t": tp/(tp+fn),
+({'Overall Acc: \t': nan, 'Mean Acc : \t': nan, 'IoU : \t': nan, 'Dice : \t': nan, 'Precision: \t': nan, 'Recall: \t': nan}, {1: nan, 0: nan})
+(base) ]0;jacktang@JackTang: /media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentation/scriptsjacktang@JackTang:/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentatiion/scripts$ ./thigh.sh 
+../test.py:246: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(fp)
+n_classes is: 2
+model:  resAttUnet
+/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentation/ptsemseg/metrics.py:76: RuntimeWarning: invalid value encountered in double_scalars
+  acc = np.diag(hist).sum() / hist.sum()
+/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentation/ptsemseg/metrics.py:77: RuntimeWarning: invalid value encountered in true_divide
+  acc_cls = np.diag(hist) / hist.sum(axis=1)
+/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentation/ptsemseg/metrics.py:78: RuntimeWarning: Mean of empty slice
+  acc_cls = np.nanmean(acc_cls)
+/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentation/ptsemseg/metrics.py:87: RuntimeWarning: invalid value encountered in true_divide
+  freq = hist.sum(axis=1) / hist.sum()
+/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentation/ptsemseg/metrics.py:88: RuntimeWarning: invalid value encountered in double_scalars
+  iu = tp / (tp + fp + fn)
+/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentation/ptsemseg/metrics.py:89: RuntimeWarning: invalid value encountered in double_scalars
+  dice = 2 * tp / (tp + fp + tp + fn)
+/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentation/ptsemseg/metrics.py:91: RuntimeWarning: invalid value encountered in double_scalars
+  cls_iu = {1: tp/(tp+fn), 0: tn/(tn+fp)}
+/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentation/ptsemseg/metrics.py:103: RuntimeWarning: invalid value encountered in double_scalars
+  "Precision: \t": tp/(tp+fp),
+/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentation/ptsemseg/metrics.py:104: RuntimeWarning: invalid value encountered in double_scalars
+  "Recall: \t": tp/(tp+fn),
+({'Overall Acc: \t': nan, 'Mean Acc : \t': nan, 'IoU : \t': nan, 'Dice : \t': nan, 'Precision: \t': nan, 'Recall: \t': nan}, {1: nan, 0: nan})
+(base) ]0;jacktang@JackTang: /media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentation/scriptsjacktang@JackTang:/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentatiion/scripts$ fsleyes
+
+** (fsleyes:25109): CRITICAL **: os_bar_hide: assertion 'OS_IS_BAR (bar)' failed
+
+(fsleyes:25109): Gtk-CRITICAL **: IA__gtk_widget_hide: assertion 'GTK_IS_WIDGET (widget)' failed
+
+** (fsleyes:25109): CRITICAL **: os_bar_set_parent: assertion 'OS_IS_BAR (bar)' failed
+(base) ]0;jacktang@JackTang: /media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentation/scriptsjacktang@JackTang:/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentatiion/scripts$ cd.[K ..
+(base) ]0;jacktang@JackTang: /media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentationjacktang@JackTang:/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentatiion$ ls
+[0m[01;32mcomparison.py[0m  [34;42mdebug[0m                                [34;42mptsemseg[0m   [34;42mruns[0m     [01;32mtest.py[0m
+[34;42mconfigs[0m        [34;42mmorphological_segmentation_pipeline[0m  [01;32mREADME.md[0m  [34;42mscripts[0m  [01;32mtrain.py[0m
+(base) ]0;jacktang@JackTang: /media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentationjacktang@JackTang:/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentatiion$ ls -a
+[0m[34;42m.[0m              [34;42mconfigs[0m  [01;32m.gitignore[0m                           [34;42mptsemseg[0m   [34;42mscripts[0m
+[34;42m..[0m             [34;42mdebug[0m    [34;42m.idea[0m                                [01;32mR

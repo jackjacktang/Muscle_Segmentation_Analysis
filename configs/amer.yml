@@ -1,0 +1,57 @@
+id: 1
+model:
+    arch: resunet
+    n_channels: 1
+model_triplet:
+    arch: amer
+    n_channels: 1
+data:
+    dataset: amer
+    split_ratio: '8:2'
+    compound: False
+    train_split: train
+    # val_split: val
+    test_split: test
+    img_rows: 'same'
+    img_cols: 'same'
+    path: '/raid/roger/dataset/thigh_dataset_roger'
+    triplet_save_path: '/raid/roger/dataset/thigh_dataset_roger_triplet'
+    patch_size: 8
+
+training:
+    train_iters: 20 #200
+    batch_size: 8 #4
+    # cross_entropy_ratio: 0.003
+    val_interval: 1 #10
+    n_classes: 2
+    n_workers: 4
+    print_interval: 1
+    print_interval_per_batch: False
+    # augmentations:
+    # #   hflip: 0.5 # [0, 1)
+    # #   vflip: 0.5 # [0, 1)
+    # #   contrast: 0.9 # [1-0.5, 1+0.5] = [0.5, 1.5]
+    # #   rotate: 180 # [-180, 180]
+    optimizer:
+        name: 'adam'
+        lr: 1.0e-3
+        weight_decay: 0.0005
+#        momentum: 0.9
+    loss:
+#        name: 'cross_entropy2d'
+#        name: 'regression_l1'
+        name:
+        # size_average: True
+    lr_schedule:
+    resume:
+
+test:
+    batch_size: 8
+    n_workers: 4
+    # cp_path : '/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentation/runs/resunet/old_dice/resunet_thigh_model_best.pkl'
+    cp_path:  ../runs/amer/60305/resunet_amer_model_best.pkl
+    csv_path: '/home/roger/thigh-csv/final/resunet/triplet_1.0_0.05'
+    save: True
+    nifti:
+        nifti_in: '/raid/roger/dataset/thigh_dataset_roger/'
+        nifti_out: '/raid/roger/dataset/thigh_dataset_roger_triplet/resunet/nii_test_out_1.0_0.05'

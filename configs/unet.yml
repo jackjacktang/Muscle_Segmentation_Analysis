@@ -1,0 +1,51 @@
+id: 1
+model:
+    arch: unet
+    n_channels: 1
+data:
+    dataset: thigh
+    split_ratio: '8:2'
+    compound: False
+    train_split: train
+    # val_split: val
+    test_split: test
+    img_rows: 'same'
+    img_cols: 'same'
+    path: '/raid/roger/dataset/thigh_dataset_roger'
+
+training:
+    train_iters: 20 #200
+    batch_size: 4 #4
+    cross_entropy_ratio: 0.003
+    val_interval: 1 #10
+    n_classes: 2
+    n_workers: 4
+    print_interval: 1
+    print_interval_per_batch: False
+    # augmentations:
+    # #   hflip: 0.5 # [0, 1)
+    # #   vflip: 0.5 # [0, 1)
+    # #   contrast: 0.9 # [1-0.5, 1+0.5] = [0.5, 1.5]
+    # #   rotate: 180 # [-180, 180]
+    optimizer:
+        name: 'adam'
+        lr: 1.0e-3
+        weight_decay: 0.0005
+#        momentum: 0.9
+    loss:
+#        name: 'cross_entropy2d'
+#        name: 'regression_l1'
+        name: dice # triplet
+        # size_average: True
+    lr_schedule:
+    resume:
+
+test:
+    batch_size: 4
+    n_workers: 4
+    cp_path : '../runs/unet/66804/unet_thigh_model_best.pkl'
+    csv_path: '/home/roger/thigh-csv'
+    save: True
+    nifti:
+        # nifti_in: '/raid/roger/dataset/test/nii_test'
+        # nifti_out: '/raid/roger/dataset/test/nii_test_out'

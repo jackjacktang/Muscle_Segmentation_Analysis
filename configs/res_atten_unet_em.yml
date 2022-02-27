@@ -1,0 +1,50 @@
+id: 1
+model:
+    arch: resAttUnet
+data:
+    dataset: em
+    compound: False
+    train_split: train
+    val_split: val
+    test_split: test
+    img_rows: 512
+    img_cols: 512
+    path: /raid/roger/EM_Challenge
+training:
+    train_iters: 100 #200
+    batch_size: 8
+
+    # cross_entropy_ratio: 0.003
+    val_interval: 10 #10
+    n_classes: 2
+    n_workers: 4
+    print_interval: 1
+    print_interval_per_batch: False
+    # augmentations:
+    #   hflip: 0.5 # [0, 1)
+    #   vflip: 0.5 # [0, 1)
+    #   rotate: 180 # [-180, 180]
+    optimizer:
+        name: 'adam'
+        lr: 1.0e-3
+        weight_decay: 0.0005
+#        momentum: 0.9
+    loss:
+        # name: 'cross_entropy2d'
+#        name: 'regression_l1'
+        name: dice
+        size_average: True
+    lr_schedule:
+    resume:
+
+test:
+    batch_size: 8
+    n_workers: 4
+    # cp_path : '/media/jacktang/Work/USYD/Research/2020_ISMRM/Deep_Muscle_Segmentation/runs/res_atten_unet/75847/resAttUnet_thigh_model_best.pkl'
+    cp_path: '../runs/res_atten_unet_em/34471/resAttUnet_em_model_best.pkl'
+    csv_path: '/home/roger/'
+    save: True
+    nifti: False
+    # nifti:
+    #     nifti_in: '/media/jacktang/Work/USYD/Research/2020_ISMRM/dataset/whole/test/nii_test'
+    #     nifti_out: '/media/jacktang/Work/USYD/Research/2020_ISMRM/dataset/whole/test/nii_test_xx'

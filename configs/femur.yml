@@ -1,0 +1,52 @@
+id: 1
+model:
+    arch: resunet
+    n_channels: 1
+data:
+    dataset: femur
+    split_ratio: '8:2'
+    compound: False
+    train_split: train
+    # val_split: val
+    test_split: test
+    img_rows: 'same'
+    img_cols: 'same'
+    split3_path: /raid/roger/dataset/Femur/split3/distal
+    path: /raid/roger/dataset/Femur
+    # tmp_out_path: /raid/roger/femur/prac
+training:
+    train_iters: 20 #200
+    batch_size: 4
+    cross_entropy_ratio: 0.003
+    val_interval: 1 #10
+    n_classes: 2
+    n_workers: 4
+    print_interval: 1
+    print_interval_per_batch: False
+    # augmentations:
+    #   hflip: 0.5 # [0, 1)
+    #   vflip: 0.5 # [0, 1)
+    #   rotate: 180 # [-180, 180]
+    optimizer:
+        name: 'adam'
+        lr: 1.0e-3
+        weight_decay: 0.0005
+        # momentum: 0.9
+    loss:
+        name: dice
+        size_average: True
+    lr_schedule:
+    resume:
+
+test:
+    batch_size: 4
+    n_workers: 4
+    cp_path : ../runs/femur/75717/resunet_femur_model_best.pkl
+    # cp_path_proximal: '../runs/femur/28659/resunet_femur_model_best.pkl'
+    # cp_path_shaft: '../runs/femur/62929/resunet_femur_model_best.pkl'
+    # cp_path_distal: '../runs/femur/55976/resunet_femur_model_best.pkl'
+    csv_path: '/home/roger/femur-seg-csv-final'
+    save: True
+    nifti:
+        nifti_in: '/raid/roger/dataset/Femur/'
+        nifti_out: '/raid/roger/dataset/Femur/nii_test_out_final'
